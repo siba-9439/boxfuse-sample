@@ -18,13 +18,13 @@ pipeline {
                   steps{
                      
                        
-                       sshagent(['22791ff3-2ecd-41ef-9517-226550b1be1f']) {
+                      sshagent(['Tomcat']) {
                        
                        sh """
-                            scp -o StrictHostKeyChecking=no  target/boxfuse-sample-java-war-hello.war ec2-user@18.191.186.46:/home/ec2-user/apache-tomcat-9.0.79/webapps/
+                            scp -o StrictHostKeyChecking=no  target/boxfuse-sample-java-war-hello.war ec2-user@13.233.153.146:/home/ec2-user/apache-tomcat-9.0.82/webapps/
                             
-                            ssh ec2-user@18.191.186.46 /home/ec2-user/apache-tomcat-9.0.79/bin/shutdown.sh
-                            ssh ec2-user@18.191.186.46 /home/ec2-user/apache-tomcat-9.0.79/bin/startup.sh
+                            ssh ec2-user@13.233.153.146/home/ec2-user/apache-tomcat-9.0.82/bin/shutdown.sh
+                            ssh ec2-user@13.233.153.146/home/ec2-user/apache-tomcat-9.0.82/bin/startup.sh
                             
                           """
     
