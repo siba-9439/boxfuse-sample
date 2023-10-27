@@ -17,6 +17,19 @@
                 <maven.compiler.target>${java.version}</maven.compiler.target>
 
 	</properties>
+	
+        <distributionManagement>
+         <snapshotRepository>
+            <id>nexusRepo</id>
+            <url>http://3.81.53.56:8081/repository/sample-snapshots/</url>
+         </snapshotRepository>
+        
+        <repository>
+            <id>nexusRepo</id>
+            <url>http://3.81.53.56:8081/repository/sample-relases/</url>
+        </repository>
+    </distributionManagement>
+	
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
