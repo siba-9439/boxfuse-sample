@@ -21,10 +21,10 @@ pipeline {
                    sshagent(['54091246-b7ff-4f02-b56f-faadbe88d48e']) {
                        
                        sh """
-                            scp -o StrictHostKeyChecking=no  target/boxfuse-sample-java-war-hello.war ec2-user@43.205.242.106:/home/ec2-user/apache-tomcat-9.0.82/webapps/
+                            scp -o StrictHostKeyChecking=no  target/boxfuse-sample-java-war-hello.war ec2-user@3.110.184.23:/home/ec2-user/apache-tomcat-9.0.82/webapps/
                             
-                            ssh ec2-user@43.205.242.106/home/ec2-user/apache-tomcat-9.0.82/bin/shutdown.sh
-                            ssh ec2-user@43.205.242.106/home/ec2-user/apache-tomcat-9.0.82/bin/startup.sh
+                            ssh ec2-user@3.110.184.23/home/ec2-user/apache-tomcat-9.0.82/bin/shutdown.sh
+                            ssh ec2-user@3.110.184.23/home/ec2-user/apache-tomcat-9.0.82/bin/startup.sh
                             
                           """
     
